@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rural Financial Assistance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Rural Financial Assistance System</h1>
+    <p>Manage your income, expenses, savings and loans easily</p>
+</header>
+
+<nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#income">Income</a>
+    <a href="#expense">Expenses</a>
+    <a href="#loan">Loans</a>
+</nav>
+
+<main>
+
+    <!-- Dashboard -->
+    <section id="dashboard">
+        <h2>Financial Dashboard</h2>
+
+        <div class="cards">
+
+            <div class="card income-card">
+                <h3>Total Income</h3>
+                <p>₹<span id="totalIncome">0</span></p>
+            </div>
+
+            <div class="card expense-card">
+                <h3>Total Expenses</h3>
+                <p>₹<span id="totalExpense">0</span></p>
+            </div>
+
+            <div class="card saving-card">
+                <h3>Total Savings</h3>
+                <p>₹<span id="totalSavings">0</span></p>
+            </div>
+
+            <div class="card loan-card">
+                <h3>Outstanding Loans</h3>
+                <p>₹<span id="totalLoan">0</span></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Income -->
+    <section id="income" class="form-section">
+
+        <h2>Add Income</h2>
+
+        <form id="incomeForm">
+
+            <input type="text"
+                   id="incomeSource"
+                   placeholder="Income Source"
+                   required>
+
+            <input type="number"
+                   id="incomeAmount"
+                   placeholder="Amount"
+                   min="1"
+                   required>
+
+            <input type="date"
+                   id="incomeDate"
+                   required>
+
+            <button type="submit">Add Income</button>
+
+        </form>
+
+        <h3>Income Records</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Source</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="incomeTable">
+            </tbody>
+        </table>
+
+    </section>
+
+
+    <!-- Expenses -->
+    <section id="expense" class="form-section">
+
+        <h2>Add Expense</h2>
+
+        <form id="expenseForm">
+
+            <input type="text"
+                   id="expenseCategory"
+                   placeholder="Expense Category"
+                   required>
+
+            <input type="number"
+                   id="expenseAmount"
+                   placeholder="Amount"
+                   min="1"
+                   required>
+
+            <input type="date"
+                   id="expenseDate"
+                   required>
+
+            <button type="submit">Add Expense</button>
+
+        </form>
+
+        <h3>Expense Records</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="expenseTable">
+            </tbody>
+        </table>
+
+    </section>
+
+
+    <!-- Loans -->
+    <section id="loan" class="form-section">
+
+        <h2>Add Loan</h2>
+
+        <form id="loanForm">
+
+            <input type="text"
+                   id="loanName"
+                   placeholder="Loan Name / Bank"
+                   required>
+
+            <input type="number"
+                   id="loanAmount"
+                   placeholder="Loan Amount"
+                   min="1"
+                   required>
+
+            <input type="number"
+                   id="loanPaid"
+                   placeholder="Amount Paid"
+                   min="0"
+                   required>
+
+            <input type="date"
+                   id="loanDate"
+                   required>
+
+            <button type="submit">Add Loan</button>
+
+        </form>
+
+        <h3>Loan Records</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Loan</th>
+                    <th>Total</th>
+                    <th>Paid</th>
+                    <th>Outstanding</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="loanTable">
+            </tbody>
+        </table>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Rural Financial Assistance System © 2026</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
